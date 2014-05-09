@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SPRING</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css" />
+
+    <link rel="stylesheet" href="../resources/css/marketing.css" th:href="@{/resources/css/marketing.css}" />
+
+
+
+</head>
+
+<body>
+    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+            <ul class="pure-menu-signlogout">
+            <li th:if="${#authorization.expression('!isAuthenticated()')}">
+                <a href="#modal-text" class="call-modal pure-button" title="Clicking this link shows the modal">注 册</a>
+            </li>
+            <li th:if="${#authorization.expression('isAuthenticated()')}"><a href="/logout" class="pure-button" th:href="@{/j_spring_security_logout}">退 出</a>
+            </li>
+        </ul>
+        <a class="pure-menu-heading">Spring</a>
+
+        <ul>
+            <li><a href="/subscribe"  th:href="@{/subscribe}">创建订阅</a>
+            </li>
+            <li class="pure-menu-selected"><a>管理订阅</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="pure-g-r">
+        <div class="pure-u-1-1">
+            <div class="splash-container">
+                <div class="splash-table">
+
+                    <a id="deletesubscribe" class="pure-button pure-button-delete">删除订阅</a>
+					<div th:replace="fragments/table :: table">TABLE
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+            <script src="../resources/js/jquery.placeholder.js" th:src="@{/resources/js/jquery.placeholder.js}"></script>
+        <script src="../resources/js/main.js" th:src="@{/resources/js/main.js}"></script>
+	<script src="../resources/js/jquery.validationEngine.js" th:src="@{/resources/js/jquery.validationEngine.js}"></script>
+	<script src="../resources/js/jquery.validationEngine-zh_CN.js" th:src="@{/resources/js/jquery.validationEngine-zh_CN.js}"></script>
+   
+</body>
+
+</html>

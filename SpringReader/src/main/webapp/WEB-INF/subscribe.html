@@ -1,0 +1,105 @@
+<!doctype html>
+    <html lang="en">
+
+    <head>
+            <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SPRING</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css"> -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css" />
+    <link rel="stylesheet" href="../resources/css/marketing.css" th:href="@{/resources/css/marketing.css}" />
+    <link rel="stylesheet" href="../resources/css/modal.css" th:href="@{/resources/css/modal.css}" />
+    <link rel="stylesheet" href="../resources/css/validationEngine.jquery.css" th:href="@{/resources/css/validationEngine.jquery.css}" />
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+    </head>
+
+    <body>
+        <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+                    <ul class="pure-menu-signlogout">
+                <li th:if="${#authorization.expression('!isAuthenticated()')}">
+                    <a href="#modal-text" class="call-modal pure-button" title="Clicking this link shows the modal">注 册</a>
+                </li>
+                <li th:if="${#authorization.expression('isAuthenticated()')}"><a href="/logout" class="pure-button" th:href="@{/j_spring_security_logout}">退 出</a>
+                </li>
+            </ul>
+            <a class="pure-menu-heading">Spring</a>
+
+            <ul>
+                <li class="pure-menu-selected"><a>创建订阅</a>
+                </li>
+                <li><a href="/manage" th:href="@{/manage}">管理订阅</a>
+                </li>
+                <li><a href="../resources/design/index.html" th:href="@{/resources/design/index.html}">更多功能示例</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="pure-g-r">
+            <div class="pure-u-2-5">
+                <div class="splash-container">
+                    <div class="splash-search">
+                        <form id="createsubscribeform" class="pure-form" method="get" th:action="@{/createsubscribe}">
+                            <fieldset>
+                                <div class="pure-control-group">
+                                                                    <input id="keyword" name="keyword"  type="text" placeholder="关键词（多个词用空格隔开）" />
+                                    <label for="keyword">我要搜索&nbsp;：&nbsp;</label>
+
+                                </div>
+
+                                <div class="pure-control-group">
+                                                                    <input id="email" class="validate[required,custom[email]]" name="email" type="text" placeholder="电子邮箱" />
+                                    <label for="keyword">发送到&nbsp;：&nbsp;</label>
+
+                                </div>
+                                <div class="pure-control-group">
+                                    <button id="createsubscribe" type="submit" class="pure-button pure-button-primary">创建订阅</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="pure-u-3-5" >
+                <div class="right-sidebar" id="searchResult">
+					<ul>
+						<li>#&nbsp;&nbsp;输入您要关注内容的<strong>“关键词”</strong>，点击<strong>“创建订阅”</strong>，即可在<strong>“预设邮箱”</strong>查看订阅内容的最新简报;</li>
+						<li>#&nbsp;&nbsp;简报每日发送一次，如有多个“订阅内容”将自动合并发送;</li>
+						<li>#&nbsp;&nbsp;测试版本仅支持<strong>“科技”</strong>、<strong>“互联网”</strong>领域的相关内容订阅。</li>
+					</ul>
+                </div>
+            </div>
+        </div>
+        
+	    <!-- A modal with its content -->
+    <section class="semantic-content" id="modal-text" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+
+        <div class="modal-inner">
+            <header>
+                <h3 id="modal-label">订阅创建成功!</h3>
+            </header>
+			<div class="">
+				<ul>
+					<li>您的<strong>电子邮箱</strong>将接收我们最新发送的20篇文章</li>
+					<li>从明日起，您将<strong>每日</strong>收到该订阅内容的最新动态</li>
+					<li>您可以在<strong>“管理订阅”</strong>中修改订阅内容</li>
+				</ul>
+           </div>
+
+        </div>
+        
+         <!-- Use Hash-Bang to maintain scroll position when closing modal -->
+        <a href="#!" class="modal-close" title="关闭提示框" data-dismiss="modal">&times;</a>
+    </section>
+       
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+	<script src="../resources/js/jquery.placeholder.js" th:src="@{/resources/js/jquery.placeholder.js}"></script>
+	<script src="../resources/js/jquery.validationEngine.js" th:src="@{/resources/js/jquery.validationEngine.js}"></script>
+	<script src="../resources/js/jquery.validationEngine-zh_CN.js" th:src="@{/resources/js/jquery.validationEngine-zh_CN.js}"></script>
+    <script src="../resources/js/modal.js" th:src="@{/resources/js/modal.js}"></script>
+    <script src="../resources/js/main.js" th:src="@{/resources/js/main.js}"></script>
+    </body>
+
+    </html>

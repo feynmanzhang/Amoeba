@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../../../resources/css/bootstrapApp.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrapApp.css}"/>
+</head>
+<body>
+<div class="navbar navbar-fixed-top" th:fragment="header">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="brand span2" href="#">SPRING</a>
+
+
+			
+			<a class="btn btn-danger span2 questionnaire" href="#">调查问卷</a>
+
+			<div class="btn-group pull-right">
+				<a class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" > 
+					<span th:text="${currentuser.getUsername()}">user</span>
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="#">我的主页</a></li>
+					<li><a href="#">设置</a></li>
+					<li th:if="${#authorization.expression('!isAuthenticated()')}"><a href="/signin" th:href="@{/signin}">Sign in</a></li>
+                	<li th:if="${#authorization.expression('isAuthenticated()')}"><a href="/logout" th:href="@{/j_spring_security_logout}">退出</a></li>    
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

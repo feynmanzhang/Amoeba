@@ -1,0 +1,70 @@
+﻿$axure.loadCurrentPage({
+  "url":"用例图.html",
+  "generationDate":new Date(1397443655254.37),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable",
+"yz_msg",
+"tpcc_wz",
+"tpcc_zt",
+"tpcc_kd",
+"L3"],
+  "page":{
+    "packageId":"a2fe0163a0404c318bcef9f57561c67c",
+    "type":"Axure:Page",
+    "name":"用例图",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"应用字体",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"08cab0d819614665b003554a641c9a74",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "size":{
+              "width":1364,
+              "height":646}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"ec39f987630247f09f634e1da4b885f0",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "size":{
+                  "width":1364,
+                  "height":646}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/用例图/u0.png"}}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "08cab0d819614665b003554a641c9a74":{
+      "scriptId":"u0"},
+    "ec39f987630247f09f634e1da4b885f0":{
+      "scriptId":"u1"}}});

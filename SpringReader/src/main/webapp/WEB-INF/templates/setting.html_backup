@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SPRING</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../../../resources/css/bootstrapApp.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrapApp.css}"/>
+    <link  href="../../../resources/tagsinput/bootstrap-tagsinput.css" rel="stylesheet" th:href="@{/resources/tagsinput/bootstrap-tagsinput.css}"/>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../../../resources/js/bootstrap.min.js" th:src="@{/resources/js/bootstrap.min.js}"></script>
+    <script src="../../../resources/tagsinput/bootstrap-tagsinput.js" th:src="@{/resources//tagsinput/bootstrap-tagsinput.js}"></script>
+    <script src="../../../resources/js/main.js" th:src="@{/resources/js/main.js}"></script>
+</head>
+<body>
+<div th:replace="fragments/header :: header">Header</div>
+<div class="container-fluid">
+    <div class="header">设置文章推送的邮箱</div>
+    <br/>
+    <br/>
+    <input type="text" class="span4" th:value="${currentuser.getPushemail()}" id="pushemail"/> 
+    <input class="btn btn-success span1" value="保存" type="button" id="settingSave"/>
+</div>
+</body>
+</html>

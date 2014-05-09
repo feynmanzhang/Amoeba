@@ -1,0 +1,358 @@
+﻿$axure.loadCurrentPage({
+  "url":"登入页.html",
+  "generationDate":new Date(1397443653826.28),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable",
+"yz_msg",
+"tpcc_wz",
+"tpcc_zt",
+"tpcc_kd",
+"L3"],
+  "page":{
+    "packageId":"ca1a318365874d9cb9e7155d77fc0fb3",
+    "type":"Axure:Page",
+    "name":"登入页",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"应用字体",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"c12202be04974e8ea13a3057d38b2111",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "size":{
+              "width":1024,
+              "height":768}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"6f6ad2103eb3438db25bb938a523d35e",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "size":{
+                  "width":1024,
+                  "height":768}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/登入页/u0.png"}},
+{
+          "id":"5b1f363003424c919a53a837b734eb36",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'Heiti SC Light', 'Heiti SC'",
+            "fontSize":"16px",
+            "fontWeight":"200",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFF4989F2},
+            "location":{
+              "x":540,
+              "y":383},
+            "size":{
+              "width":100,
+              "height":32},
+            "borderWidth":"-1",
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"0eb17a2953b54bc48999a6d779c64e4f",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'Heiti SC Light', 'Heiti SC'",
+                "fontSize":"16px",
+                "fontWeight":"200",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF4989F2},
+                "location":{
+                  "x":540,
+                  "y":383},
+                "size":{
+                  "width":100,
+                  "height":32},
+                "borderWidth":"-1",
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/登入页/u2.png"}},
+{
+          "id":"5c8fe273341f45af8ab2d88eb642c5ac",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'Heiti SC Light', 'Heiti SC'",
+            "fontSize":"14px",
+            "fontWeight":"200",
+            "underline":true,
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFF4989F2,
+              "opacity":1},
+            "location":{
+              "x":400,
+              "y":398},
+            "size":{
+              "width":57,
+              "height":17}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"42c1a03d654c487f9710bf93b023b83d",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'Heiti SC Light', 'Heiti SC'",
+                "fontSize":"14px",
+                "fontWeight":"200",
+                "underline":true,
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF4989F2,
+                  "opacity":1},
+                "location":{
+                  "x":400,
+                  "y":398},
+                "size":{
+                  "width":57,
+                  "height":17}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"b5b62e70e5a644e0b2f305e6d8e6dac1",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":60,
+              "y":110},
+            "size":{
+              "width":288,
+              "height":305}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"3d94c2fd3afb48b9a37172bd63f4fe4f",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":60,
+                  "y":110},
+                "size":{
+                  "width":288,
+                  "height":305}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/登入页/u6.png"}},
+{
+          "id":"ed1e80a0bbc04a90ba42a54afaf2d3d6",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "horizontalAlignment":"left",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFF999999,
+              "opacity":1},
+            "location":{
+              "x":400,
+              "y":296},
+            "size":{
+              "width":240,
+              "height":30}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"c143571b88b648d1a6a06a8d76ac99c3",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "horizontalAlignment":"left",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF999999,
+                  "opacity":1},
+                "location":{
+                  "x":400,
+                  "y":296},
+                "size":{
+                  "width":240,
+                  "height":30}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/登入页/u8.png"}},
+{
+          "id":"8755c5d8087e4bab830dd17c6af0c98f",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "horizontalAlignment":"left",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFF999999,
+              "opacity":1},
+            "location":{
+              "x":400,
+              "y":336},
+            "size":{
+              "width":240,
+              "height":30}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"d402471ec9a44b2aa7e2a9f83a35f039",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "horizontalAlignment":"left",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF999999,
+                  "opacity":1},
+                "location":{
+                  "x":400,
+                  "y":336},
+                "size":{
+                  "width":240,
+                  "height":30}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/登入页/u8.png"}},
+{
+          "id":"e0c75e774aeb47189b974b885a908c82",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontSize":"18px",
+            "location":{
+              "x":400,
+              "y":264},
+            "size":{
+              "width":37,
+              "height":22}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"cec95aeea0e54728adf51c84c9d31096",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontSize":"18px",
+                "location":{
+                  "x":400,
+                  "y":264},
+                "size":{
+                  "width":37,
+                  "height":22}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "c12202be04974e8ea13a3057d38b2111":{
+      "scriptId":"u0"},
+    "6f6ad2103eb3438db25bb938a523d35e":{
+      "scriptId":"u1"},
+    "5b1f363003424c919a53a837b734eb36":{
+      "scriptId":"u2"},
+    "0eb17a2953b54bc48999a6d779c64e4f":{
+      "scriptId":"u3"},
+    "5c8fe273341f45af8ab2d88eb642c5ac":{
+      "scriptId":"u4"},
+    "42c1a03d654c487f9710bf93b023b83d":{
+      "scriptId":"u5"},
+    "b5b62e70e5a644e0b2f305e6d8e6dac1":{
+      "scriptId":"u6"},
+    "3d94c2fd3afb48b9a37172bd63f4fe4f":{
+      "scriptId":"u7"},
+    "ed1e80a0bbc04a90ba42a54afaf2d3d6":{
+      "scriptId":"u8"},
+    "c143571b88b648d1a6a06a8d76ac99c3":{
+      "scriptId":"u9"},
+    "8755c5d8087e4bab830dd17c6af0c98f":{
+      "scriptId":"u10"},
+    "d402471ec9a44b2aa7e2a9f83a35f039":{
+      "scriptId":"u11"},
+    "e0c75e774aeb47189b974b885a908c82":{
+      "scriptId":"u12"},
+    "cec95aeea0e54728adf51c84c9d31096":{
+      "scriptId":"u13"}}});

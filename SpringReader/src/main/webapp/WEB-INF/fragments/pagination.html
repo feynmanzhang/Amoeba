@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"></meta>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css" />
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="../../resources/css/marketing-old-ie.css" th:href="@{/resources/css/marketing-old-ie.css}">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="../resources/css/marketing.css" th:href="@{/resources/css/marketing.css}" />
+    <!--<![endif]-->
+</head>
+<body>
+<!-- Pagination Bar -->
+<div th:fragment='pagination'>
+  <div class='pure-paginator'>
+    <ul>
+      <li th:class="${page.firstPage}? 'disabled' : ''">
+        <span class="pure-button disabled" th:if='${page.firstPage}'>First</span>
+        <a class="pure-button" th:if='${not page.firstPage}' href="#" th:onclick="'javascript:paginationSearch(\'' + @{${page.url}(page.page=1,page.size=${page.size})} + '\');'">First</a>
+      </li>
+      <li th:class="${page.hasPreviousPage}? '' : 'disabled'">
+        <span class="pure-button disabled" th:if='${not page.hasPreviousPage}'>&#171;</span>
+        <a class="pure-button" th:if='${page.hasPreviousPage}' href="#" th:onclick="'javascript:paginationSearch(\'' + @{${page.url}(page.page=${page.number-1},page.size=${page.size})} + '\');'" title='Go to previous page'>&#171;</a>
+      </li>
+      <li th:each='item : ${page.items}' th:class="${item.current}? 'active' : ''">
+        <span class="pure-button pure-button-active"  th:if='${item.current}' th:text='${item.number}'>1</span>
+        <a class="pure-button" th:if='${not item.current}' href="#" th:onclick="'javascript:paginationSearch(\'' + @{${page.url}(page.page=${item.number},page.size=${page.size})} + '\');'"><span th:text='${item.number}'>1</span></a>
+      </li>
+      <li th:class="${page.hasNextPage}? '' : 'disabled'">
+        <span class="pure-button disabled" th:if='${not page.hasNextPage}'>&#187;</span>
+        <a class="pure-button" th:if='${page.hasNextPage}' href="#" th:onclick="'javascript:paginationSearch(\'' + @{${page.url}(page.page=${page.number+1},page.size=${page.size})} + '\');'" title='Go to next page'>&#187;</a>
+      </li>
+      <li th:class="${page.lastPage}? 'disabled' : ''">
+        <span class="pure-button disabled" th:if='${page.lastPage}'>Last</span>
+        <a class="pure-button" th:if='${not page.lastPage}' href="#" th:onclick="'javascript:paginationSearch(\'' + @{${page.url}(page.page=${page.totalPages},page.size=${page.size})} + '\');'">Last</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

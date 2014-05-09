@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" class="animated-index-page media-desktop">
+   <head>
+      <link href="https://dt8kf6553cww8.cloudfront.net/static/images/favicon-vflk5FiAC.ico" rel="shortcut icon" />
+      <link href="https://dt8kf6553cww8.cloudfront.net/static/css/main-vflPrHMlw.css" type="text/css" rel="stylesheet" />
+      <script type="text/javascript">window.ST=+new Date();</script>
+      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+      <title>SPRING</title>
+   </head>
+   <body class="zh_CN  ">
+      <div id="outer-frame">
+         <div id="page-header">
+            <div id="account-header"><a href="/SpringReader/signin" class="downloading-link">登录</a></div>
+         </div>
+         <div id="page-content">
+            <div class="top">
+               <div class="devices">
+                  <img src="https://dt8kf6553cww8.cloudfront.net/static/images/index/devices-vfl3TTUs-.png" data-hi-res="https://dt8kf6553cww8.cloudfront.net/static/images/index/devices@2x-vflcoJUs3.png" id="devices-background" />
+               </div>
+               <form onsubmit="return Forms.submitOnlyOnce();" id="signup-form" method="post" novalidate="novalidate" action="" class="">
+                  <input type="hidden" name="t" value="tWxq5SWF7BVzhxPC0d52l3Mj" /><img src="https://dt8kf6553cww8.cloudfront.net/static/images/index/logo-vflme-Gvg.png" data-hi-res="https://dt8kf6553cww8.cloudfront.net/static/images/index/logo@2x-vfleQNE2w.png" />
+                  <div class="subtitle">让资料触手可及</div>
+                  <div id="register-partial-container">
+                     <div id="register-partial">
+                        <div id="register-footer">
+                           <div class="buttons">	
+                          	<a href="/SpringReader/signup" class="freshbutton-blue big-border call-to-action">注册</a>
+                        	</div>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <div id="divider"></div>
+            <div class="bottom">
+               <div class="content">
+                  <div class="bullet bullet-0 clearfix">
+                     <div class="bullet-image"><img src="https://dt8kf6553cww8.cloudfront.net/static/images/index/1-vflbLvAPq.png" alt="无论身在何处" data-hi-res="https://dt8kf6553cww8.cloudfront.net/static/images/index/1@2x-vfla5ZOaX.png" /></div>
+                     <div class="bullet-content">
+                        <p class="subline">无论身在何处</p>
+                        <p class="description">将您的文件存入 Dropbox，从您的电脑、手机或平板电脑上即可访问。随时随地都可编辑文档、自动添加照片或展示视频。</p>
+                     </div>
+                  </div>
+                  <div class="bullet bullet-1 clearfix">
+                     <div class="bullet-image"><img src="https://dt8kf6553cww8.cloudfront.net/static/images/index/2-vflawKxYX.png" alt="与好友共享" data-hi-res="https://dt8kf6553cww8.cloudfront.net/static/images/index/2@2x-vflGPO2qc.png" /></div>
+                     <div class="bullet-content">
+                        <p class="subline">与好友共享</p>
+                        <p class="description">与朋友共享照片。与您的团队协作，就好似大家正在共用一台电脑。所有内容自动设为隐私，因此您可以控制谁看到什么内容。</p>
+                     </div>
+                  </div>
+                  <div class="bullet bullet-2 clearfix">
+                     <div class="bullet-image"><img src="https://dt8kf6553cww8.cloudfront.net/static/images/index/3-vflwYDamk.png" alt="安全保障" data-hi-res="https://dt8kf6553cww8.cloudfront.net/static/images/index/3@2x-vfl5-nqQv.png" /></div>
+                     <div class="bullet-content">
+                        <p class="subline">安全保障</p>
+                        <p class="description">即使您的手机进水了，您在 Dropbox 中的文件始终都是安全的，而且可以即刻恢复。Dropbox 采用 AES-256 位加密技术及两步验证功能来保障您的文件安全。</p>
+                     </div>
+                  </div>
+                  <div class="bullet bullet-3 clearfix">
+                     <div class="bullet-image"><img src="https://dt8kf6553cww8.cloudfront.net/static/images/index/4-vflp1DQc7.png" alt="Dropbox 企业版" data-hi-res="https://dt8kf6553cww8.cloudfront.net/static/images/index/4@2x-vflcmf-Xp.png" /></div>
+                     <div class="bullet-content">
+                        <p class="subline">Dropbox 企业版</p>
+                        <p class="description">数百万人在工作中使用 Dropbox 。有了 Dropbox 企业版，获取强大安全的 Dropbox ，外加稳健的管理员控制、专注的支持以及您所需的所有空间。<a href="/business">了解企业版 Dropbox</a>。</p>
+                     </div>
+                  </div>
+                  <br style="clear:both;" />
+               </div>
+               <div class="buttons"><a href="/SpringReader/signin" class="freshbutton-blue big-border call-to-action">注册</a><a href="/SpringReader/signup" class="freshbutton big-border call-to-action">登录</a></div>
+               <div class="footer"><a href="#">定价</a><a href="#">企业版</a><a href="#">移动电话</a><a href="#">开发人员</a><a href="#">帮助</a><a href="#">博客</a><a href="#">工作机会</a><a href="#">隐私与条款</a></div>
+            </div>
+         </div>
+      </div>
+
+   </body>
+</html>

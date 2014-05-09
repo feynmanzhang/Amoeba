@@ -1,0 +1,76 @@
+﻿$axure.loadCurrentPage({
+  "url":"高级搜索.html",
+  "generationDate":new Date(1397443654854.34),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable",
+"yz_msg",
+"tpcc_wz",
+"tpcc_zt",
+"tpcc_kd",
+"L3"],
+  "page":{
+    "packageId":"627420dae80f4df89f76f7860a89b940",
+    "type":"Axure:Page",
+    "name":"高级搜索",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"应用字体",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"341ff4f0d8b143b09711c27271d9035a",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":58,
+              "y":192},
+            "size":{
+              "width":791,
+              "height":286}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"92b377fdafef41afa8210b2a9049f355",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":58,
+                  "y":192},
+                "size":{
+                  "width":791,
+                  "height":286}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/高级搜索/u0.png"}}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "341ff4f0d8b143b09711c27271d9035a":{
+      "scriptId":"u0"},
+    "92b377fdafef41afa8210b2a9049f355":{
+      "scriptId":"u1"}}});

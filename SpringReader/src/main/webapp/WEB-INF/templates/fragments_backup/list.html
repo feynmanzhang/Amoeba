@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../../../resources/css/bootstrapApp.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrapApp.css}"/>
+</head>
+<body>
+<!-- Pagination Bar -->
+<div  class="articlelist" th:fragment='list'>
+	<div class="articleitem" th:each='item : ${page.getContent()}'>
+		<a href="#" th:href="${item.link}" target="_blank">
+			<h4  th:text='${item.title}'>Artile</h4>
+		</a>
+	</div>
+</div>
+</body>
+</html>

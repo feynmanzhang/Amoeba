@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SPRING</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../../../resources/css/bootstrapApp.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrapApp.css}"/>
+    <link  href="../../../resources/tagsinput/bootstrap-tagsinput.css" rel="stylesheet" th:href="@{/resources/tagsinput/bootstrap-tagsinput.css}"/>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../../../resources/js/bootstrap.min.js" th:src="@{/resources/js/bootstrap.min.js}"></script>
+    <script src="../../../resources/tagsinput/bootstrap-tagsinput.js" th:src="@{/resources//tagsinput/bootstrap-tagsinput.js}"></script>
+    <script src="../../../resources/js/main.js" th:src="@{/resources/js/main.js}"></script>
+</head>
+<body>
+<div th:replace="fragments/header :: header">Header</div>
+<div class="container-fluid">
+	<div class="header">设置文章推送的邮箱</div>
+	<div class="header">
+		<br/>
+	    <input type="text" class="span4"  id="pushemail" th:value="${currentuser.getPushemail()}" placeholder="请输入正确的邮箱地址，为空则不推送文章..."/> 
+	    <input class="btn btn-success span1" value="保存" type="button" id="settingSave"/>
+    </div>
+    <div class="header"><br/>设置您感兴趣的关键词</div>
+
+	<div class="header">
+	    <br/>
+		<input name="tagsinput" id="tagsinput" class="tagsinput" value="Clean,Fresh,Modern,Unique" placeholder="请使用'添加'按钮添加关键词" th:value="${userkeywords}" data-role="tagsinput"/>
+		<input class="btn btn-success span1" value="保存" type="button" id="keywordSave"/>
+	</div>
+	
+	<div>
+	    <br/>
+        <input type="text" class="search-query span4" placeholder="请输入关键词..." id="keyword"/>                
+        <input class="btn btn-default span1" value="搜索" type="button" id="keywordSearch"/>
+        <input class="btn btn-primary span1" value="添加" type="button" id="keywordPending"/>
+    </div>
+	<div id="searchResult" class="span12"></div>
+</div>
+</body>
+</html>

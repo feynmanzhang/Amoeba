@@ -1,0 +1,495 @@
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
+ body {
+    line-height: 1.7em;
+    color: #7f8c8d;
+    font-size: 13px;
+    font-family: Helvetica,"Microsoft YaHei",Arial,sans-serif;
+}
+
+.pure-g [class *= "pure-u"] {
+    font-family: Helvetica,"Microsoft YaHei",Arial,sans-serif;
+}
+.pure-g-r [class *= "pure-u"] {
+    font-family: Helvetica,"Microsoft YaHei",Arial,sans-serif;
+}
+html,
+button,
+input,
+select,
+textarea,
+.pure-button{
+    font-family: Helvetica,"Microsoft YaHei",Arial,sans-serif;
+}
+.placeholder { color: #aaa; }
+h1, h2, h3, h4, h5, h6, label {
+    color: #34495e;
+}
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+/*
+ * -- LAYOUT STYLES --
+ * These are some useful classes which I will need
+ */
+ .l-box {
+    padding: 1em;
+}
+.l-box-lrg {
+    padding: 2em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.is-center {
+    text-align: center;
+}
+/*
+ * -- PURE FORM STYLES --
+ * Style the form inputs and labels
+ */
+ .pure-form label {
+ /*   margin: 1em 0;*/
+    font-weight: 400;
+    font-size: 90%;
+}
+.pure-form input[type="text"], .pure-form input[type="password"], .pure-form input[type="email"] {
+    border: 1px solid #ddd;
+    box-shadow: none;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.pure-form .pure-checkbox,
+.pure-form .pure-radio {
+    display: inline;
+    
+}
+.pure-from .remember-span{
+	margin: 0 0.5em;
+}
+
+ .login-error{
+	color: #F02222;
+}
+
+/*
+ * -- PURE BUTTON STYLES --
+ * I want my pure-button elements to look a little different
+ */
+ .pure-button {
+    background-color: #1f8dd6;
+    color: white;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+}
+.pure-button-primary {
+    background: #1f8dd6;
+    color: white;
+    border-radius: 5px;
+    font-size: 120%;
+}
+.pure-button-delete {
+    background: #1f8dd6;
+    color: white;
+    border-radius: 5px;
+    font-size: 100%;
+}
+/*
+ * -- MENU STYLES --
+ * I want to customize how my .pure-menu looks at the top of the page
+ */
+ .home-menu {
+    padding: 0.5em;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
+}
+.home-menu.pure-menu-open {
+    background: #1f8dd6;
+}
+.pure-menu.pure-menu-open.pure-menu-fixed {
+    /* Fixed menus normally have a border at the bottom. */
+    border-bottom: none;
+    /* I need a higher z-index here because of the scroll-over effect. */
+    z-index: 4;
+}
+.home-menu .pure-menu-heading {
+    color: white;
+    font-weight: 700;
+    font-size: 120%;
+}
+.home-menu .pure-menu-selected a {
+    color: white;
+    background: #1d81c2;
+}
+.home-menu a {
+    color: white;
+}
+
+.home-menu ul a:hover, .home-menu ul a:focus {
+    background: #1f8dd6;
+    color: white;
+}
+.home-menu .pure-menu-selected a:hover, .home-menu .pure-menu-selected a:focus {
+    background: #1d81c2;
+    cursor: default;
+}
+.home-menu .pure-menu-disabled a:hover, .home-menu .pure-menu-disabled a:focus {
+    /*background:#1f8dd6;*/
+    cursor: default;
+}
+.pure-menu-signlogout {
+    float: right;
+    /*background: white;*/
+}
+
+.home-menu .pure-menu-signlogout .pure-button{
+    background: white;
+    color: #1f8dd6;
+}
+.pure-form fieldset{
+	padding: 10px 0 .75em;
+}
+/*
+ * -- SPLASH STYLES --
+ * This is the blue top section that appears on the page.
+ */
+ .splash-container {
+    background: #ffffff;
+    /*z-index: 1;*/
+    overflow: visible;
+    /* The following styles are required for the "scroll-over" effect */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /*position: fixed !important;*/
+}
+.splash {
+    /* absolute center .splash within .splash-container */
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    /*    text-transform: uppercase;*/
+}
+.splash-table {
+    /* absolute center .splash within .splash-container */
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    top: 80px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: left;
+    /*    text-transform: uppercase;*/
+}
+.splash-container .pure-table-horizontal {
+    position: relative;
+    top: 10px;
+    width: 100%;
+}
+.splash-container table th {
+    text-align: left;
+}
+.splash-signin {
+    /* absolute center .splash within .splash-container */
+    width: 60%;
+    height: 100%;
+    /*margin: auto;*/
+    position: relative;
+    top: 120px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: left;
+    /*    text-transform: uppercase;*/
+}
+.splash-signon {
+    /* absolute center .splash within .splash-container */
+    width: 300px;
+    height: 100%;
+    /*margin: auto;*/
+    position: relative;
+    top: 0;
+    left: 10px;
+    bottom: 0;
+    right: 0;
+    text-align: left;
+    /*    text-transform: uppercase;*/
+}
+.splash-search {
+    /* absolute center .splash within .splash-container */
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    top: 90px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: left;
+    /*    text-transform: uppercase;*/
+}
+/* This is the main heading that appears on the blue section */
+ .splash-head {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1f8dd6;
+    border: 4px solid #1f8dd6;
+    padding: 1em 1.6em;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+}
+/* This is the subheading that appears on the blue section */
+ .splash-subhead {
+    color: #1f8dd6;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+
+.pure-control-group{
+	display:inline;
+	float:left;
+	width:100%;
+}
+.splash-search .pure-control-group input[type="text"]{
+	width:75%;
+	float:right;
+}
+.splash-search .pure-control-group label{
+	clear:left;
+	float:right;
+}
+.splash-search .pure-button{
+	clear:left;
+	margin:0 0 0 25%;
+}
+
+
+#searchResult{
+	 margin-bottom:100px;
+}
+
+.pure-paginator .pure-button {
+	font-size:14px;
+	color: white;
+	padding: .4em 0.6em;
+	height: 100%;
+	font-weight:400;
+}
+
+.pure-paginator .pure-button-active,
+.pure-paginator .disabled{
+	color: #2d64b3;
+	cursor: default;
+}
+
+.right-sidebar {
+    width:80%;    
+    height：80%；   
+            /*    float:right;*/
+    margin: auto;
+    position: relative;
+    top: 100px;
+    left: 0;
+    bottom: 100px;
+    right: 100px;
+    border:2px solid #e5e5e5;
+    padding: 1.1em 2em;
+}
+
+.right-sidebar ol,
+.right-sidebar ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.right-sidebar li{
+	margin-top: 25px;
+}
+.right-sidebar li a {
+font-size: 14px;
+color: #2d64b3;
+font-weight: bold;
+text-decoration: none;
+}
+
+.right-sidebar font {
+font-size: 14px;
+line-height: 26px;
+color: #666;
+}
+.right-sidebar p {
+font-size: 14px;
+color: #999;
+margin:0;
+}
+.preview_today {
+    height:46px;
+    line-height:46px;
+    font-size:20px;
+    color:#444;
+    font-weight:bold;
+}
+.keywords {
+    height:28px;
+    background:#f5f5f5;
+    line-height:28px;
+    color:black;
+    padding:0px 10px;
+    font-size:14px;
+}
+.keywords .key-right {
+    float:right;
+}
+.keywords .key-left {
+    float:left;
+}
+legend .key-left{
+	font-weight:bold;
+	size: 16px;
+}
+legend .key-right{
+	float:right;
+	size: 14px;
+}
+
+.paging {
+    height:21px;
+    padding:5px;
+    font-size:12px;
+    line-height:2;
+    text-align:right;
+    color:#676767;
+    margin:13px 0px 0px 0px;
+}
+.paging a {
+    display:inline-block;
+    border:1px solid #bfbfbf;
+    padding:0 10px;
+    margin-right:5px;
+}
+.paging span.thispage {
+    display:inline-block;
+    margin-right:5px;
+    padding:0 10px;
+    color:#0090d7;
+    font-weight:bold;
+}
+.paging a:hover {
+    background:#0090d7;
+    color:#FFF;
+    text-decoration:none;
+}
+.paging a.end {
+    color:#d8d8d8;
+    background-color:#FFF;
+}
+
+/*
+ * -- CONTENT STYLES --
+ * This represents the content area (everything below the blue section)
+ */
+ .content-wrapper {
+    /* These styles are required for the "scroll-over" effect */
+    position: absolute;
+    top: 87%;
+    width: 100%;
+    min-height: 12%;
+    z-index: 2;
+    background: white;
+}
+/* This is the class used for the main content headers (<h2>) */
+ .content-head {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 2em 0 1em;
+}
+/* This is a modifier class used when the content-head is inside a ribbon */
+ .content-head-ribbon {
+    color: white;
+}
+/* This is the class used for the content sub-headers (<h3>) */
+ .content-subhead {
+    color: #1f8dd6;
+}
+.content-subhead i {
+    margin-right: 7px;
+}
+/* This is the class used for the dark-background areas. */
+ .ribbon {
+    background: #2d3e50;
+    color: #aaa;
+}
+/* This is the class used for the footer */
+ .footer {
+    background: #111;
+}
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+ @media (min-width: 48em) {
+    /* We increase the body font size */
+    body {
+        font-size: 16px;
+    }
+    /* We want to give the content area some more padding */
+    .content {
+        padding: 1em;
+    }
+    /* We can align the menu header to the left, but float the
+    menu items to the right. */
+    .home-menu {
+        text-align: left;
+    }
+/*        .home-menu ul {
+        float: left;
+    }*/
+    /* We increase the height of the splash-container */
+    /*    .splash-container {
+        height: 500px;
+    }*/
+    /* We decrease the width of the .splash, since we have more width
+    to work with */
+    .splash {
+        width: 50%;
+        height: 50%;
+    }
+    .splash-head {
+        font-size: 250%;
+    }
+    /* We remove the border-separator assigned to .l-box-lrg */
+    .l-box-lrg {
+        border: none;
+    }
+}
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES --
+ * On desktops and other large devices, we want to over-ride some
+ * of the mobile and tablet styles.
+ */
+ @media (min-width: 78em) {
+    /* We increase the header font size even more */
+    .splash-head {
+        font-size: 300%;
+    }
+}

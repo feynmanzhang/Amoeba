@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments/common :: headerFragment" >
+</head>
+<body>
+
+<div class="container">
+	<br/>
+	<br/>
+	<br/>
+	<div class="span4 offset4">
+		<h1>Spring Reader</h1>
+		<form action="authentication" th:action="@{/j_spring_security_check}" method="post" class="well">
+			<fieldset>
+                <input id="j_username" name="j_username"
+                   	type="text" required="required" autofocus="autofocus" class="input span3"
+                    placeholder="用户名"/>
+                <input id="j_password" name="j_password"
+                  	type="password" required="required" class="input span3"
+                    placeholder="密码"/>               
+                <div class="form-group">
+		            <div class="col-lg-offset-2 col-lg-10">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="_spring_security_remember_me" /> 记住我
+		                    </label>
+		                </div>
+		            </div>
+		         </div>
+			</fieldset>			
+            <button type="submit" class="btn btn-success">登录</button>
+            <div class="form-group">
+	            <div class="col-lg-offset-2 col-lg-10">
+	                <p><a href="signup" th:href="@{/signup}">创建新账户</a></p>
+	            </div>
+        	</div>
+		</form>
+    </div>
+	<div th:include="fragments/common :: [//footer]"></div>       
+</div>
+</body>
+</html>

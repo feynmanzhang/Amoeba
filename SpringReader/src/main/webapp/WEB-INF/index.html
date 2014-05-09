@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <meta name="description" content="量身定制您的阅读"></meta>
+
+    <title>Spring</title>
+
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css"> -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css" />
+    <link rel="stylesheet" href="../resources/css/marketing.css" th:href="@{/resources/css/marketing.css}" />
+    <link rel="stylesheet" href="../resources/css/modal.css" th:href="@{/resources/css/modal.css}" />
+    <link rel="stylesheet" href="../resources/css/validationEngine.jquery.css" th:href="@{/resources/css/validationEngine.jquery.css}" />
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+</head>
+
+<body>
+    <!--     <div class="pure-g-r">
+        <div class="pure-u-1-1">
+            <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+                            <ul class="pure-menu-signlogout">
+                    <li  th:if="${#authorization.expression('!isAuthenticated()')}">
+                        <a href="#modal-text" class="call-modal pure-button" title="Clicking this link shows the modal">注 册</a>
+                    </li>
+                    <li th:if="${#authorization.expression('isAuthenticated()')}"><a href="/logout" class="pure-button" th:href="@{/j_spring_security_logout}">退 出</a>
+                    </li>
+                </ul>
+                <a class="pure-menu-heading">Spring</a>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="pure-g-r">
+        <div class="pure-u-2-3">
+            <div class="splash-container">
+                <div class="splash">
+                    <h1 class="splash-head">SPRING</h1>
+                    <p class="splash-subhead">
+                        量身定制您的阅读
+                    </p>
+                    <!--    <p>
+                         <a href="http://purecss.io" class="pure-button pure-button-primary">注 册</a> 
+                        <a href="/subscribe" th:href="@{/subscribe}" class=" pure-button pure-button-primary" >进入体验</a>
+                    </p> -->
+                </div>
+            </div>
+
+        </div>
+        <div class="pure-u-1-3">
+            <div class="splash-container">
+                <div class="splash-signin" th:if="${#authorization.expression('!isAuthenticated()')}">
+                    <form class="pure-form" action="authentication" th:action="@{/j_spring_security_check}" method="post">
+
+                        <fieldset>
+                            <legend>
+                                <span class="key-left">登&nbsp;录</span>
+                                <a href="#modal-text" class="call-modal key-right" title="点击注册" >注册账号</a>
+                            </legend>
+                            <div class="pure-control-group">
+                                <input id="j_username" class="validate[custom[email]]" type="text" placeholder="邮箱账号" name="j_username" />
+                            </div>
+
+                            <div class="pure-control-group">
+                                <input id="j_password"  type="password" placeholder="密码" name="j_password" />
+                            </div>
+                            <div class="pure-control-group">
+                                <label for="remember" class="pure-checkbox">
+                                    <input id="remember" type="checkbox" name="_spring_security_remember_me" />
+                                    <span class="remember-span">保存我的信息</span>
+                                </label>
+                            </div>
+                            <div class="pure-control-group">
+                                <th:block th:if="${param.error != null}">
+        							<label class="login-error" >邮箱或密码错误，请重新登录。</label>
+    							</th:block>
+    						</div>
+                            <div class="pure-control-group">
+                                <button type="submit" class="pure-button pure-button-primary">登&nbsp;录</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <!--                 <div class="splash-signin" th:if="${#authorization.expression('isAuthenticated()')}">
+                            <div class="pure-control-group">
+                                <a class="pure-button pure-button-primary">调查问卷</a>
+                            </div>
+                </div> -->
+            </div>
+        </div>
+
+    </div>
+    <!-- A modal with its content -->
+    <section class="semantic-content" id="modal-text" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+
+        <div class="modal-inner">
+            <header>
+                <h2 id="modal-label">注册账号</h2>
+            </header>
+            <div class="splash-container">
+                <div class="splash-signon">
+                    <form class="pure-form" method="post" th:action="@{/signup}" th:object="${signupForm}">
+                        <fieldset>
+                            <div class="pure-control-group">
+                                <input id="email" class="validate[required,custom[email],ajax[ajaxEmail]]" type="text" placeholder="输入邮箱地址" th:field="*{email}" />
+                            </div>  
+                            <div class="pure-control-group">
+                                <input id="password" class="validate[required,minSize[6],maxSize[16]" type="password" placeholder="输入密码（6位以上）" th:field="*{password}" />
+                            </div>
+                            <div class="pure-control-group">
+                                <input id="verifypassword" class="validate[required,minSize[6],maxSize[16],equals[password]]" type="password" placeholder="确认密码" th:field="*{verifypassword}" />
+                            </div>
+                            <div class="pure-control-group">
+                                <th:block th:if="${#fields.hasErrors('${signupForm.*}')}">
+        							<div th:replace="fragments/alert :: alert (type='danger', message='Form contains errors. Please try again.')">Alert</div>
+    							</th:block>
+    						</div>
+                            <div class="pure-control-group">
+                                <button type="submit" class="pure-button pure-button-primary">注 册</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Use Hash-Bang to maintain scroll position when closing modal -->
+        <a href="#!" class="modal-close" title="关闭对话框" data-dismiss="modal">&times;</a>
+    </section>
+
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+	<script src="../resources/js/jquery.placeholder.js" th:src="@{/resources/js/jquery.placeholder.js}"></script>
+	<script src="../resources/js/jquery.validationEngine.js" th:src="@{/resources/js/jquery.validationEngine.js}"></script>
+	<script src="../resources/js/jquery.validationEngine-zh_CN.js" th:src="@{/resources/js/jquery.validationEngine-zh_CN.js}"></script>
+    <script src="../resources/js/modal.js" th:src="@{/resources/js/modal.js}"></script>
+    <script src="../resources/js/main.js" th:src="@{/resources/js/main.js}"></script>
+</body>
+
+</html>

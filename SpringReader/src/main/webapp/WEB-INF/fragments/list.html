@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8"></meta>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css" />
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="../../resources/css/marketing-old-ie.css" th:href="@{/resources/css/marketing-old-ie.css}">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="../resources/css/marketing.css" th:href="@{/resources/css/marketing.css}" />
+    <!--<![endif]-->
+</head>
+
+<body>
+    <!-- Search Result List -->
+    <div class="right-sidebar">
+    <div th:fragment='list'>
+        <div class="preview_today">结果预览</div>
+        <div class="keywords">
+            <span class="key-left" th:text="${keyword}">“关键词1……”</span>
+            <span class="key-right" th:text="'共查询到' + ${page.getTotalElements()}+ '篇相关文章'">共有128篇相关文章</span>
+        </div>
+
+        <ul  th:each='item : ${page.getContent()}'>
+            <li><a href="#" th:href="${item.link}" target="_blank" th:text='${item.title}'>文章的标题</a>
+                <br />
+                <font th:text='${item.description}'>文章内容</font>
+                <p th:text="${item.feedname}+ ' • ' + ${item.timestamp}">虎嗅 - 2014年4月11日</p>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+
+</html>
