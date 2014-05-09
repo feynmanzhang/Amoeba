@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)file:///C:/docume~1/zhangl~1/locals~1/temp/27.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman',
+              "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+  font-size:12px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; }
+h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.88em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
+pre code { border: 0px !important; padding: 0;}
+code { padding: 0 3px 0 3px; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%; outline:none;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+</style><title>README</title></head><body><h1 id="nginx">修改版NGINX实施部署文档</h1>
+<h2 id="nginx_1">NGINX编译安装</h2>
+<h3 id="linux-redhat-5-5">LINUX环境(Redhat 5.5)</h3>
+<h5 id="1-oracle-instantclient">1.安装oracle instantclient</h5>
+<p>下载链接:<a href="http://www.oracle.com/technetwork/topics/linuxsoft-082809.html">oracle instantclient下载</a>。<br>
+下载并安装安装basic、sqlplus和devel这三个包(目前Linux下已通过测试Version 10.2.0.5版本,<strong>注意32位与64位区别</strong>):  </p>
+<pre><code>oracle-instantclient-basic-10.2.0.5-1.i386.rpm 
+oracle-instantclient-sqlplus-10.2.0.5-1.i386.rpm  
+oracle-instantclient-devel-10.2.0.5-1.i386.rpm
+</code></pre>
+
+<h5 id="2-rpm">2.在下载目录下rpm命令执行</h5>
+<p><code>#rpm -ilv oracle-instantclient-basic-10.2.0.5-1.i386.rpm oracle-instantclient-sqlplus-10.2.0.5-1.i386.rpm oracle-instantclient-devel-10.2.0.5-1.i386.rpm</code> <br>
+安装后，执行命令<br>
+<code>#whereis oracle</code><br>
+回显如下结果:<br>
+oracle: /usr/lib/oracle /usr/include/oracle /usr/share/oracle<br>
+说明oracle client已经安装到以上目录了，接着配置环境变量。  </p>
+<h5 id="3">3.配置环境变量</h5>
+<p><code>#vi ~/.bash_profile</code><br>
+在.bash_profile中添加如下行:<br>
+32位:  </p>
+<pre><code>export LD_LIBRARY_PATH=/usr/lib/oracle/10.2.0.5/client/lib
+export TNS_ADMIN=/usr/lib/oracle/10.2.0.5/client
+export ORACLE_HOME=/usr/lib/oracle/10.2.0.5/client
+</code></pre>
+
+<p>64位:  </p>
+<pre><code>export LD_LIBRARY_PATH=/usr/lib/oracle/10.2.0.5/client64/lib
+export TNS_ADMIN=/usr/lib/oracle/10.2.0.5/client64
+export ORACLE_HOME=/usr/lib/oracle/10.2.0.5/client64
+</code></pre>
+
+<p>然后执行命令,是环境变量配置生效:<br>
+<code>source ~/.bash_profile</code>  <br>
+测试命令: <br>
+<code>echo $LD_LIBRARY_PATH</code>   </p>
+<h5 id="4-oracle">4.oracle客户端连接配置</h5>
+<p>在如下路径新增tnsnames.ora文件:  <br>
+32位:<code>/usr/lib/oracle/10.2.0.5/client/tnsnames.ora</code><br>
+64位:<code>/usr/lib/oracle/10.2.0.5/client64/tnsnames.ora</code><br>
+并添加如下配置:  </p>
+<pre><code>ORCL =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 172.16.16.194)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = orcl)
+    )
+  )
+</code></pre>
+
+<h5 id="5">5.测试客户端数据连接</h5>
+<p>命令如下:<br>
+32位:<code>sqlplus sde/sde@orcl172</code><br>
+64位:<code>sqlplus64 sde/sde@orcl172</code>  </p>
+<h3 id="ngxin">NGXIN编译安装</h3>
+<h6 id="1">1.官方参考</h6>
+<p><a href="http://nginx.org/en/docs/configure.html">Building nginx from Sources</a>  </p>
+<h5 id="2">2.代码说明</h5>
+<p>平台改造版NGINX是基于Nignx 1.2.9版本做修改，修改增加如下文件:</p>
+<pre><code>src/core/nginx.c
+src/core/ngx_cycle.c
+src/core/ngx_cycle.h
+src/core/ngx_hash.h
+src/http/ngx_http_request.h
+src/http/modules/ngx_http_access_control_module.c
+src/http/modules/ngx_http_log_module.c
+src/http/modules/config
+src/os/win32/ngx_process_cycle.c
+</code></pre>
+
+<p>其中<code>src/http/modules/config</code>做为新增模块<code>src/http/modules/ngx_http_access_control_module.c</code>的编译配置文件，内容如下:  </p>
+<pre><code>ngx_addon_name=ngx_http_access_control_module
+HTTP_MODULES="$HTTP_MODULES ngx_http_access_control_module"
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/ngx_http_access_control_module.c"
+</code></pre>
+
+<h6 id="3_1">3.编译生成</h6>
+<ul>
+<li>切换到NGINX工程目录下:<br>
+<code>#cd ~/nginx</code>  </li>
+<li>生成makefile文件(64位oracle instantclient):  </li>
+</ul>
+<pre><code>bash ./configure  --with-ld-opt="-L /usr/lib/oracle/10.2.0.5/client64/lib/ -lclntsh" --with-cc-opt="-I /usr/include/oracle/10.2.0.5/client64" --sbin-path=/usr/local/nginx/nginx --conf-path=/usr/local/nginx/nginx.conf --pid-path=/usr/local/nginx/nginx.pid --with-http_ssl_module --with-http_stub_status_module --add-module=src/http/modules --with-debug
+</code></pre>
+
+<p>其中，<code>--with-debug</code>用于调试运行，支持nginx的debug层级日志。<br>
+-    依次执行命令:<br>
+  编译：<code>make</code><br>
+  安装：<code>make install</code></p>
+<h3 id="nginx-conf">配置文件nginx.conf</h3>
+<p>1.新增模块的配置  </p>
+<pre><code>#编辑访问日志入库sql,db日志与文件日志相互独立
+#支持http、server和location上下文，一般在http上下文配置
+dblog_format dbmain "INSERT INTO fmap_accesslog_t(remoteaddr, timestamp, uri, sid, httpstatus, key,costtime) VALUES(\'$remote_addr\',TO_TIMESTAMP_TZ(\'$time_local\', \'dd/mon/yyyy:hh24:mi:ss tzhtzm\', \'NLS_DATE_LANGUAGE = AMERICAN\'), \'$request_uri\', \'$request_sid\',$status,\'$request_key\',$request_time)"; 
+
+#设置db连接实例、用户名、密码和入库sql名称
+#支持main、server和location上下文，一般在main和server上下文配置
+access_dblog orcl sde sde dbmain;
+
+#关闭db日志
+access_dblog off;
+
+#设置访问控制的db连接实例、用户名、密码和授权数据获取sql
+#仅适配http上下文
+accesscontrol_dbconf orcl sde sde "SELECT A.KEY,S.URI,A.MAXTPH,A.SID FROM FMAP_ACCESSCONTROL_T A,FMAP_SERVICE_T S WHERE  A.ISAPPROVED =1 AND A.SID = S.SID";
+
+#设置共享内存
+#aczone:设置共享内存的名称(只做识别作用)和大小
+#burst:设置最高突发次数(3次/s)
+#nodelay:设置是否延迟burst突发请求的处理，nodelay表示不延迟请求，超量请求则直接返回错误码；没有设置nodelay则会延迟超量请求。
+#支持server和location上下文
+access_control aczone=fmap:10m burst=3 nodelay;
+
+#设置访问控制日志的层级，如info，error等，属不常用设置
+#支持server和location上下文
+access_control_log_level info;
+
+#设置访问控制中被限制处理请求的错误码
+#支持server和location上下文
+access_control_status 511;
+</code></pre>
+
+<p>2.精化模块的设置</p>
+<pre><code>#Disables keep-alive connections with misbehaving browsers. The browser parameters specify which browsers will be affected. The value msie6 disables keep-alive connections with old versions of MSIE, once a POST request is received. The value safari disables keep-alive connections with Safari and Safari-like browsers on Mac OS X and Mac OS X-like operating systems. The value none enables keep-alive connections with all browsers.Prior to version 1.1.18, the value safari matched all Safari and Safari-like browsers on all operating systems, and keep-alive connections with them were disabled by default.
+#context:  http, server, location
+keepalive_disable msie6;    #default
+
+#default: keepalive_requests 100;
+#context:  http, server, location
+#This directive appeared in version 0.8.0.
+#Sets the maximum number of requests that can be served through one keep-alive connection. After the maximum number of requests are made, the connection is closed.
+keepalive_requests 10000;
+
+#开启或关闭在错误信息的“Server”响应头中输出nginx版本号。
+#默认值:  server_tokens on;
+server_tokens off;
+
+#状态监控，nginx编译需加上“ --with-http_stub_status_module”。
+#通过"http://ip:post/status"访问监控状态，返回值说明：
+Active connections    //当前 Nginx 正处理的活动连接数。
+server accepts handled requests x y z//总共处理了x 个连接 , 成功创建处理y个连接,总共处理了z个请求。
+Reading //nginx 读取到客户端的 Header 信息数。
+Writing //nginx 返回给客户端的 Header 信息数。
+Waiting //开启 keep-alive 的情况下，这个值等于 active - (reading + writing)，意思就是 Nginx 已经处理完正在等候下一次请求指令的驻留连接
+#conf文件配置如下：
+location /status {
+stub_status on;
+}
+
+</code></pre>
+
+<h3 id="_1">改造模块说明</h3>
+<p>1.日志入库模块日志表表结构--ngx_http_log_module.c  </p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>注释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REMOTEADDR</td>
+<td>VARCHAR2(64)</td>
+<td>用户IP</td>
+</tr>
+<tr>
+<td>TIMESTAMP</td>
+<td>DATE</td>
+<td>访问时间</td>
+</tr>
+<tr>
+<td>URI</td>
+<td>VARCHAR2(64)</td>
+<td>访问连接串</td>
+</tr>
+<tr>
+<td>SID</td>
+<td>VARCHAR2(6)</td>
+<td>服务ID</td>
+</tr>
+<tr>
+<td>HTTPSTATUS</td>
+<td>INTEGER</td>
+<td>响应状态码</td>
+</tr>
+<tr>
+<td>KEY</td>
+<td>VARCHAR2(32)</td>
+<td>授权码</td>
+</tr>
+<tr>
+<td>COSTTIME</td>
+<td>NUMBER(16，3)</td>
+<td>响应耗时</td>
+</tr>
+</tbody>
+</table>
+<p>2.访问控制模块主要HTTP响应状态码说明--ngx_http_access_control_module.c  </p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>正常</td>
+</tr>
+<tr>
+<td>201</td>
+<td>正常，但查询结果为空</td>
+</tr>
+<tr>
+<td>400</td>
+<td>非法访问，bad request，一般为URI和SID不正确</td>
+</tr>
+<tr>
+<td>401</td>
+<td>非法访问，Authorization Required，key不正确</td>
+</tr>
+<tr>
+<td>403</td>
+<td>非法访问，Forbidden，对指定资源没有访问权限</td>
+</tr>
+<tr>
+<td>404</td>
+<td>非法访问，not found，请求的资源部存在，一般为缺少?标示符</td>
+</tr>
+<tr>
+<td>405</td>
+<td>非法访问，Method not allowed，使用不支持的http方法访问(服务仅支持get和post请求)</td>
+</tr>
+<tr>
+<td>500</td>
+<td>服务端异常，解析post请求体为空</td>
+</tr>
+<tr>
+<td>511</td>
+<td>服务端异常，客户端请求超出配置并发数，服务端拒绝响应</td>
+</tr>
+</tbody>
+</table></body></html>

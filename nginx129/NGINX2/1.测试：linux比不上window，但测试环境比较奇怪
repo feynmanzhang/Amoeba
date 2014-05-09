@@ -1,0 +1,17 @@
+1.测试：linux比不上window，但测试环境比较奇怪
+2.增加oracle客户端的超时断链处理
+为什么linux就一个session连接？而且process进程ID不同于linux查到的
+ ps -ef |grep nginx
+3.mail
+4.ab test
+
+2.killed 处于此状态的会话，表示出现了错误，正在回滚，当然，也是占用系统资源的。还有一点就是，killed的状态一般会持续较长时间，而且用windows下的工具pl/sql developer来kill掉，是不管用的，要用命令：alter system kill session 'sid,serial#' ; 
+
+~~~~~~~~~~~~~~~~~~~~
+高并发不是阻断session的原因
+
+为什么linux就一个session连接？
+只有master进程去发起DB连接,不论启动还是reload。而且不像window环境下fork会复制db的session，linux不会，所以保持1个db session。
+
+而且process进程ID不同于linux查到的？
+这和linux环境下nginx的启动流程有关系。但nginx做reload操作后即发现process 进程ID为nginx master进程ID。
